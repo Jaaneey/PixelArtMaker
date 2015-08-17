@@ -2,6 +2,7 @@ var body = document.body;
 var grabDivs = document.getElementsByTagName("div");
 var gridsize = 1000;
 var selectedColor = "grey";
+var rainbowArray = [];
 //create grid
 createDivs(gridsize);
 createPalette(Math.sqrt(gridsize));
@@ -28,13 +29,15 @@ function createDivs(number){
 		body.appendChild(newDiv);
 }} 
 
+/* RANDOM PALLETTE
 function createPalette(number){
 	for (var i=0; i<number; i++){
 		var color = getRandomColor();
 		grabDivs[i].className= "palette";
-		grabDivs[i].style.backgroundColor = ""+ color +"";
+		grabDivs[i].style.backgroundColor = ""+color+"";
 	}
 }
+*/
 
 function selectColor(){
 	selectedColor = this.style.backgroundColor;
@@ -45,7 +48,7 @@ function changeColor(selected){
 	this.style.backgroundColor = ""+selectedColor+"";
 }
 
-
+/* Random Color Generator
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
@@ -54,4 +57,13 @@ function getRandomColor() {
     }
     return color;
 }
+*/
 
+function getRainbow(){
+	for(var i = 0; i < Math.sqrt(gridsize); i++);
+	var r = i*255;
+	var g = i*255;
+	var b = i*255;
+	var rainbowColor = "rgb("+r+","+b+","+h+")";
+	rainbowArray.push(rainbowColor);
+}
