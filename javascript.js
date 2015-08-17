@@ -1,31 +1,31 @@
 var body = document.body;
 var grabDivs = document.getElementsByTagName("div");
-var gridsize = 100;
-var selectedColor;
+var gridsize = 1000;
+var selectedColor = "grey";
 //create grid
 createDivs(gridsize);
 createPalette(Math.sqrt(gridsize));
 
 for (var j=0; j < grabDivs.length; j++){
 	if (grabDivs[j].className !== "palette"){
-	grabDivs[j].addEventListener("click", changeColor);
+		grabDivs[j].addEventListener("click", changeColor);
 	}
 	else {
-		grabDivs[i].addEventListener("click", selectColor);
+		grabDivs[j].addEventListener("click", selectColor);
 	}
 }
 
 
 function createDivs(number){
-for (var i=0; i<number; i++){
-	var newDiv = document.createElement("div");
-	newDiv.className = "class"+number;
-	newDiv.style.width = "5.1%";
-	newDiv.style.float="left";
-	newDiv.style.paddingBottom="5.1%";
-	newDiv.style.margin="2px";
-	newDiv.style.border = "1px solid black";
-	body.appendChild(newDiv);
+	for (var i=0; i<number; i++){
+		var newDiv = document.createElement("div");
+		newDiv.className = "class"+number;
+		newDiv.style.width = "5.1%";
+		newDiv.style.float="left";
+		newDiv.style.paddingBottom="5.1%";
+		newDiv.style.margin="2px";
+		newDiv.style.border = "1px solid black";
+		body.appendChild(newDiv);
 }} 
 
 function createPalette(number){
@@ -42,7 +42,7 @@ function selectColor(){
 
 
 function changeColor(selected){
-	this.style.backgroundColor = "red";
+	this.style.backgroundColor = ""+selectedColor+"";
 }
 
 
