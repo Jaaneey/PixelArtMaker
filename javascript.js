@@ -29,7 +29,7 @@ function createDivs(number){
 		body.appendChild(newDiv);
 }} 
 
-/* RANDOM PALLETTE
+
 function createPalette(number){
 	for (var i=0; i<number; i++){
 		var color = getRandomColor();
@@ -37,7 +37,7 @@ function createPalette(number){
 		grabDivs[i].style.backgroundColor = ""+color+"";
 	}
 }
-*/
+
 
 function selectColor(){
 	selectedColor = this.style.backgroundColor;
@@ -48,7 +48,7 @@ function changeColor(selected){
 	this.style.backgroundColor = ""+selectedColor+"";
 }
 
-/* Random Color Generator
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
@@ -57,7 +57,7 @@ function getRandomColor() {
     }
     return color;
 }
-*/
+
 
 function getRainbow(){
 	for(var i = 0; i < Math.sqrt(gridsize); i++);
