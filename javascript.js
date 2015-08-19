@@ -21,9 +21,9 @@ function createDivs(number){
 	for (var i=0; i<number; i++){
 		var newDiv = document.createElement("div");
 		newDiv.className = "class"+number;
-		newDiv.style.width = "5.1%";
+		newDiv.style.width = "2.1%";
 		newDiv.style.float="left";
-		newDiv.style.paddingBottom="5.1%";
+		newDiv.style.paddingBottom="2.1%";
 		newDiv.style.margin="2px";
 		newDiv.style.border = "1px solid black";
 		body.appendChild(newDiv);
